@@ -1,13 +1,15 @@
-# 🛠️ رحلتي في الأنظمة المدمجة - Embedded Systems Journey
+# 🛠️ Embedded Systems & Firmware Development
 
-مرحباً! هذا المستودع مخصص لتوثيق مشاريعي وتطبيقاتي في عالم الأنظمة المدمجة.
+مرحباً بك! هذا المستودع مخصص لمشاريع الأنظمة المدمجة وتطوير البرمجيات الوسيطة.
 
-## 🚀 ما الذي أعمل عليه الآن؟
-* **Arduino Projects:** تطوير أجهزة إنذار ذكية.
-* **Microcontrollers:** التعمق في معمارية PIC16F877A.
-* **Firmware:** كتابة أكواد برمجية بلغة C.
+### 📁 المشاريع الحالية:
+* **Smart Smoke Detector:** نظام إنذار ذكي باستخدام Arduino و MQ-2.
+* **PIC16F877A Projects:** تطبيقات برمجية للمتحكمات الدقيقة بلغة C.
 
-## 🔗 تواصل معي
-* [مدونتي التقنية](https://mahamed-torky.hashnode.dev)
-* [LinkedIn](https://www.linkedin.com/in/mahamed-eltorky-b03292399)
-* 
+### 🚀 المهارات التقنية:
+* البرمجة بلغة C/C++.
+* التعامل مع بروتوكولات UART, SPI, I2C.
+* تصميم الدوائر الإلكترونية.
+
+---
+🔗 [تابع مقالاتي التقنية على Hashnode من هنا](https://mahamed-torky.hashnode.dev)
