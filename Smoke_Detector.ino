@@ -1,44 +1,41 @@
-/*
- * Project: Smart Smoke Detector
- * Author: Mahamed Eltorky
- * Platform: Arduino
- * Description: Detects smoke levels using MQ-2 sensor and triggers an alarm.
- */
+// نظام أجينا الذكي لكشف الدخان v2.0
+// تطوير: محمد التركي (أجينا)
 
-// تعريف الأطراف (Pins)
-const int sensorPin = A0;   // طرف مستشعر الدخان MQ-2
-const int buzzerPin = 9;    // طرف الإنذار (Buzzer)
-const int ledPin = 13;      // طرف الليد للتنبيه البصري
-
-// حد التنبيه (Threshold)
-int threshold = 400; 
+const int smokePin = A0;   // مستشعر الدخان
+const int buzzerPin = 9;  // الجرس
+const int ledPin = 13;    // لمبة البيان (اختياري)
+int threshold = 400;      // مستوى الحساسية
 
 void setup() {
+  pinMode(smokePin, INPUT);
   pinMode(buzzerPin, OUTPUT);
   pinMode(ledPin, OUTPUT);
-  Serial.begin(9600); // لفتح شاشة المراقبة ومتابعة القراءات
-  
-  Serial.println("System Initializing...");
-  delay(2000); // وقت تسخين المستشعر
+  Serial.begin(9600);
+  Serial.println(">>> نظام أجينا للأمان مستعد الآن <<<");
 }
 
 void loop() {
-  int sensorValue = analogRead(sensorPin); // قراءة القيمة التناظرية
-  
-  Serial.print("Smoke Level: ");
-  Serial.println(sensorValue);
+  int smokeLevel = analogRead(smokePin);
+  Serial.print("مستوى الدخان: ");
+  Serial.println(smokeLevel);
 
-  if (sensorValue > threshold) {
-    // حالة الخطر: تشغيل الإنذار والليد
-    digitalWrite(buzzerPin, HIGH);
-    digitalWrite(ledPin, HIGH);
-    Serial.println("⚠️ WARNING: Smoke Detected!");
+  if (smokeLevel > threshold) {
+    // حالة الخطر
+    Serial.println("⚠️ تحذير شديد! تم كشف دخان!");
+    digitalWrite(ledPin, HIGH); 
+    
+    // إنذار متقطع (مزعج أكتر للتنبيه)
+    for(int i=0; i<5; i++) {
+      digitalWrite(buzzerPin, HIGH);
+      delay(80);
+      digitalWrite(buzzerPin, LOW);
+      delay(80);
+    }
   } else {
-    // حالة الأمان: إيقاف الإنذار
-    digitalWrite(buzzerPin, LOW);
+    // حالة الأمان
     digitalWrite(ledPin, LOW);
+    digitalWrite(buzzerPin, LOW);
   }
-
-  delay(500); // تأخير بسيط لاستقرار القراءات
+  
+  delay(500); // تحديث كل نصف ثانية
 }
-
