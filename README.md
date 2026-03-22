@@ -1,15 +1,16 @@
-# 🛠️ Embedded Systems & Firmware Development
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=eltorky1987&theme=github-dark&area=true" />
+</div>
 
-مرحباً بك! هذا المستودع مخصص لمشاريع الأنظمة المدمجة وتطوير البرمجيات الوسيطة.
+<br />
 
-### 📁 المشاريع الحالية:
-* **Smart Smoke Detector:** نظام إنذار ذكي باستخدام Arduino و MQ-2.
-* **PIC16F877A Projects:** تطبيقات برمجية للمتحكمات الدقيقة بلغة C.
+<div align="center">
+  <img src="https://img.shields.io/badge/Microsoft-00A4EF?style=for-the-badge&logo=microsoft&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+</div>
 
-### 🚀 المهارات التقنية:
-* البرمجة بلغة C/C++.
-* التعامل مع بروتوكولات UART, SPI, I2C.
-* تصميم الدوائر الإلكترونية.
+<br />
 
----
-🔗 [تابع مقالاتي التقنية على Hashnode من هنا](https://mahamed-torky.hashnode.dev)
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=eltorky1987&show_icons=true&theme=github_dark&hide_border=true" />
+</div>
